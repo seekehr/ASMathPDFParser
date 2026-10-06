@@ -20,12 +20,13 @@ export const LABELS = [
 export type Label = (typeof LABELS)[number];
 
 /**
- * Free OpenRouter vision models. Requests start with the first; when a model errors (free models are
- * often rate-limited upstream) the next one is tried. Questions are sent as page images because the
- * maths isn't in the PDF text layer.
+ * Free OpenRouter vision models, spread across upstream providers (Google AI Studio, AtlasCloud,
+ * Nvidia) because a busy provider rate-limits all of its models at once. Requests start with the
+ * first; when a model errors the next one is tried, and models that refuse the request are dropped.
+ * Questions are sent as page images because the maths isn't in the PDF text layer.
  */
 export const OPENROUTER_MODELS = (
-  process.env.OPENROUTER_MODELS || "google/gemma-4-31b-it:free,google/gemma-4-26b-a4b-it:free,thinkingmachines/inkling:free"
+  process.env.OPENROUTER_MODELS || "google/gemma-4-31b-it:free,dots-studio/dots-3-note-preview:free,nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free,google/gemma-4-26b-a4b-it:free"
 )
   .split(",")
   .map((m) => m.trim())

@@ -128,7 +128,8 @@ async function chat(apiKey: string, model: string, prompt: string, images: Buffe
       response_format: { type: "json_object" },
       reasoning: { effort: "low", exclude: true },
       temperature: 0,
-      max_tokens: 4096,
+      // room for reasoning models to think before answering
+      max_tokens: 16000,
     }),
   });
   const body = (await res.json().catch(() => ({}))) as ChatResponse;
@@ -164,6 +165,7 @@ export async function labelQuestions(jobs: LabelJob[], images: Buffer[], allKeys
   let lastRequest = 0;
   // free models are often rate-limited by their upstream provider; on errors we move on to the
   // next model in the list, and stay on whichever one is working
+  const models = [...OPENROUTER_MODELS];
   let modelIdx = 0;
   let pending = jobs.filter((j) => !labels[j.key]);
   for (let round = 1; pending.length && round <= 3; round++) {
@@ -171,19 +173,16 @@ export async function labelQuestions(jobs: LabelJob[], images: Buffer[], allKeys
     console.log(`  ${pending.length} questions in ${requests.length} request(s) via OpenRouter`);
     for (const [n, req] of requests.entries()) {
       const ids = req.jobs.map((j) => j.id);
-      for (let tries = 1; ; tries++) {
+      let failuresInARow = 0;
+      for (;;) {
+        const model = models[modelIdx];
         await sleep(Math.max(0, lastRequest + MIN_INTERVAL_MS - Date.now()));
         lastRequest = Date.now();
-        console.log(`  [${n + 1}/${requests.length}] labelling IDs ${ids[0]}-${ids.at(-1)} (${ids.length} questions, ${req.images.length} images)`);
+        console.log(`  [${n + 1}/${requests.length}] labelling IDs ${ids[0]}-${ids.at(-1)} (${ids.length} questions, ${req.images.length} images) with ${model}`);
         try {
-          const data = await chat(
-            apiKey,
-            OPENROUTER_MODELS[modelIdx],
-            `${PROMPT}\n\nRequested IDs: ${ids.join(", ")}`,
-            req.images.map((i) => images[i]),
-          );
+          const data = await chat(apiKey, model, `${PROMPT}\n\nRequested IDs: ${ids.join(", ")}`, req.images.map((i) => images[i]));
           const usage = data.usage ? `, ${data.usage.prompt_tokens} tokens in, ${data.usage.completion_tokens} out` : "";
-          console.log(`    answered by ${data.model}${usage}`);
+          console.log(`    answered by ${data.model ?? model}${usage}`);
           const result = parseReply(data.choices?.[0]?.message?.content ?? "");
           let got = 0;
           for (const job of req.jobs) {
@@ -198,20 +197,28 @@ export async function labelQuestions(jobs: LabelJob[], images: Buffer[], allKeys
         } catch (err) {
           const status = err instanceof OpenRouterError ? err.status : 0;
           const message = err instanceof Error ? err.message : String(err);
-          if (status === 401 || status === 402 || status === 403) throw err;
+          // a bad key or (for free models) a negative balance affects every model
+          if (status === 401 || status === 402) throw err;
           if (status === 429 && /per.?day/i.test(message)) {
             throw new Error(`OpenRouter's daily free-model limit was reached; labels so far are saved in ${LABELS_FILE}. Rerun tomorrow to continue.\n${message}`);
           }
+          console.warn(`    ${model}: ${message.slice(0, 300)}`);
+          // the model refuses this kind of request (gated, removed, can't take the images): stop using it
+          if (status === 400 || status === 403 || status === 404) {
+            models.splice(modelIdx, 1);
+            if (!models.length) throw new Error(`None of the models in OPENROUTER_MODELS can be used. Last error: ${message}`);
+            modelIdx %= models.length;
+            console.warn(`    dropped ${model} for this run, switching to ${models[modelIdx]}`);
+            continue;
+          }
           // per-minute limits, overloaded upstream providers and network errors are worth retrying
           const retryable = status === 0 || status === 408 || status === 429 || status >= 500;
-          const models = OPENROUTER_MODELS.length;
-          if (retryable && tries < models * 3) {
-            console.warn(`    ${OPENROUTER_MODELS[modelIdx]}: ${message.slice(0, 300)}`);
-            modelIdx = (modelIdx + 1) % models;
+          if (retryable && ++failuresInARow < models.length * 3) {
+            modelIdx = (modelIdx + 1) % models.length;
             // back off only once every model has failed in a row
-            const allFailed = tries % models === 0;
-            const wait = allFailed ? (err instanceof OpenRouterError && err.retryAfterMs) || 30_000 * (tries / models) : 0;
-            console.warn(`    retrying with ${OPENROUTER_MODELS[modelIdx]}${wait ? ` in ${Math.ceil(wait / 1000)}s` : ""}`);
+            const rounds = failuresInARow / models.length;
+            const wait = Number.isInteger(rounds) ? (err instanceof OpenRouterError && err.retryAfterMs) || 30_000 * rounds : 0;
+            console.warn(`    retrying with ${models[modelIdx]}${wait ? ` in ${Math.ceil(wait / 1000)}s` : ""}`);
             await sleep(wait);
             continue;
           }
