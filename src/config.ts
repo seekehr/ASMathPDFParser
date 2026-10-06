@@ -19,11 +19,22 @@ export const LABELS = [
 ] as const;
 export type Label = (typeof LABELS)[number];
 
-export const GEMINI_MODEL = process.env.GEMINI_MODEL ?? "gemini-3.6-flash";
 /**
- * Questions sent to Gemini per request. Batches are large because the free tier allows few
- * requests per minute/day; at ~110 questions a request, all 326 take 3 requests.
+ * Free OpenRouter vision models. Requests start with the first; when a model errors (free models are
+ * often rate-limited upstream) the next one is tried. Questions are sent as page images because the
+ * maths isn't in the PDF text layer.
  */
-export const LABEL_BATCH_SIZE = Number(process.env.GEMINI_BATCH_SIZE) || 110;
-/** Minimum gap between Gemini requests, to stay under free-tier requests-per-minute and tokens-per-minute. */
-export const GEMINI_MIN_INTERVAL_S = Number(process.env.GEMINI_MIN_INTERVAL_S) || 30;
+export const OPENROUTER_MODELS = (
+  process.env.OPENROUTER_MODELS || "google/gemma-4-31b-it:free,google/gemma-4-26b-a4b-it:free,thinkingmachines/inkling:free"
+)
+  .split(",")
+  .map((m) => m.trim())
+  .filter(Boolean);
+/**
+ * Page images per request. Free models allow only 50 requests a day (20 a minute) but don't cap
+ * tokens, so each request carries several pages: all 326 questions take about 17 requests.
+ */
+export const IMAGES_PER_REQUEST = Number(process.env.IMAGES_PER_REQUEST) || 6;
+/** Labelling pages: A4 packed edge to edge, rendered at this width (px) so the maths stays legible. */
+export const LABEL_PAGE = { margin: 12 };
+export const LABEL_IMAGE_WIDTH = 1240;

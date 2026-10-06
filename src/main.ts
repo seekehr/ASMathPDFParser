@@ -1,9 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
-import { INPUT_PDF, LABELS, LABELS_FILE, OUT_DIR, PAPER } from "./config.js";
+import { INPUT_PDF, LABEL_IMAGE_WIDTH, LABEL_PAGE, LABELS, LABELS_FILE, OUT_DIR, PAPER } from "./config.js";
 import { Composer, pageStrip } from "./layout.js";
 import { labelQuestions, loadLabels, saveLabels, type LabelMap } from "./label.js";
-import { analyze, groupQuestions, loadClean, questionKey, type PageInfo, type Question } from "./source.js";
+import { analyze, groupQuestions, loadClean, questionKey, renderJpegs, type PageInfo, type Question } from "./source.js";
 
 const skipLabels = process.argv.includes("--no-label");
 
@@ -20,25 +20,22 @@ async function main() {
   let labels = loadLabels();
   const unlabelled = questions.filter((q) => !labels[questionKey(q)]);
   if (unlabelled.length && !skipLabels) {
-    console.log(`Labelling ${unlabelled.length} questions with Gemini`);
-    labels = await labelQuestions(
-      unlabelled.map((q) => ({ key: questionKey(q), id: questions.indexOf(q) + 1 })),
-      keys,
-      async (batch) => {
-        const qs = batch.map((j) => questions[j.id - 1]);
-        // pack questions several to a page: Gemini bills PDFs per page, so fewer pages = fewer tokens
-        const c = await Composer.create(src, pages, qs.flatMap((q) => q.qp));
-        qs.forEach((q, i) => {
-          const qpHeight = q.qp.reduce((h, p) => h + (pageStrip(pages[p]) ? c.stripHeight(pageStrip(pages[p])!) : 0), 0);
-          c.ensure(c.textHeight(12) + 4 + qpHeight);
-          c.text(`ID ${batch[i].id}`, { size: 12, bold: true });
-          c.space(4);
-          for (const p of q.qp) strip(c, pages[p], true);
-          c.space(16);
-        });
-        return c.doc.save();
-      },
-    );
+    console.log(`Labelling ${unlabelled.length} questions via OpenRouter`);
+    // pack questions edge to edge, several per page image, to keep the number of requests down
+    const c = await Composer.create(src, pages, unlabelled.flatMap((q) => q.qp), LABEL_PAGE);
+    const jobs = unlabelled.map((q) => {
+      c.ensure(c.textHeight(12) + 4 + qpHeight(c, pages, q));
+      const first = c.doc.getPageCount() - 1;
+      const id = questions.indexOf(q) + 1;
+      c.text(`ID ${id}`, { size: 12, bold: true });
+      c.space(4);
+      for (const p of q.qp) strip(c, pages[p], true);
+      const last = c.doc.getPageCount() - 1;
+      c.space(14);
+      return { key: questionKey(q), id, images: Array.from({ length: last - first + 1 }, (_, i) => first + i) };
+    });
+    const images = await renderJpegs(await c.doc.save(), LABEL_IMAGE_WIDTH);
+    labels = await labelQuestions(jobs, images, keys);
   }
 
   saveLabels(labels, keys);
@@ -56,6 +53,14 @@ async function write(file: string, c: Composer) {
 function strip(c: Composer, info: PageInfo, keepWhole = false) {
   const s = pageStrip(info);
   if (s) c.strip(s, keepWhole);
+}
+
+/** Height the question paper strips of `q` take up in `c`. */
+function qpHeight(c: Composer, pages: PageInfo[], q: Question) {
+  return q.qp.reduce((h, p) => {
+    const s = pageStrip(pages[p]);
+    return h + (s ? c.stripHeight(s) : 0);
+  }, 0);
 }
 
 function title(q: Question, n: number) {
@@ -88,8 +93,7 @@ function sectionHeading(c: Composer, text: string, info: PageInfo | undefined) {
 }
 
 function questionBlock(c: Composer, pages: PageInfo[], q: Question, n: number, labels: LabelMap) {
-  const qpHeight = q.qp.reduce((h, p) => h + (pageStrip(pages[p]) ? c.stripHeight(pageStrip(pages[p])!) : 0), 0);
-  c.ensure(c.textHeight(11) + c.textHeight(9) + 6 + qpHeight);
+  c.ensure(c.textHeight(11) + c.textHeight(9) + 6 + qpHeight(c, pages, q));
   c.text(title(q, n), { size: 11, bold: true });
   c.text(topics(q, labels), { size: 9, grey: true });
   c.space(6);

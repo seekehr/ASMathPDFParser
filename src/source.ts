@@ -170,7 +170,26 @@ export async function analyze(doc: PDFDocument, sourceFile: string): Promise<Pag
   return pages;
 }
 
-const HEADER_RE = /^Question Paper (.+?) • Paper (\d) \(variant (\d+)\) • Q(\d+)/;
+/** Renders every page of a PDF to a JPEG `width` pixels wide. */
+export async function renderJpegs(bytes: Uint8Array, width: number): Promise<Buffer[]> {
+  const pdf = await getDocument({ data: bytes, verbosity: 0 }).promise;
+  const images: Buffer[] = [];
+  for (let i = 1; i <= pdf.numPages; i++) {
+    const page = await pdf.getPage(i);
+    const vp = page.getViewport({ scale: width / page.getViewport({ scale: 1 }).width });
+    const canvas = createCanvas(Math.ceil(vp.width), Math.ceil(vp.height));
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    await page.render({ canvas: canvas as any, canvasContext: ctx as any, viewport: vp }).promise;
+    images.push(canvas.toBuffer("image/jpeg", 85));
+    page.cleanup();
+  }
+  await pdf.cleanup();
+  return images;
+}
+
+const HEADER_RE =/^Question Paper (.+?) • Paper (\d) \(variant (\d+)\) • Q(\d+)/;
 
 export function groupQuestions(pages: PageInfo[]): Question[] {
   const questions: Question[] = [];

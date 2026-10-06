@@ -21,8 +21,7 @@ import type { PageInfo } from "./source.js";
 
 const PAGE_W = 595.28;
 const PAGE_H = 841.89;
-const MARGIN = 42;
-const CONTENT_W = PAGE_W - 2 * MARGIN;
+const DEFAULT_MARGIN = 42;
 /** Vertical whitespace (in source units) that may be used as a split point. */
 const MIN_SPLIT_GAP = 3;
 
@@ -58,16 +57,28 @@ export class Composer {
     private pages: PageInfo[],
     private xLeft: number,
     xRight: number,
+    private margin: number,
+    private pageH: number,
   ) {
     this.doc = doc;
-    this.scale = CONTENT_W / (xRight - xLeft);
+    this.scale = this.contentWidth / (xRight - xLeft);
   }
 
-  static async create(src: PDFDocument, pages: PageInfo[], usedPages: number[]): Promise<Composer> {
+  private get contentWidth() {
+    return PAGE_W - 2 * this.margin;
+  }
+
+  /** Pages are A4 unless `page` overrides the margin or the page height (in points). */
+  static async create(
+    src: PDFDocument,
+    pages: PageInfo[],
+    usedPages: number[],
+    page: { margin?: number; height?: number } = {},
+  ): Promise<Composer> {
     const used = usedPages.map((i) => pages[i]).filter((p) => p.ink.length);
     const xLeft = Math.min(...used.map((p) => p.xMin)) - 2;
     const xRight = Math.max(...used.map((p) => p.xMax)) + 2;
-    const c = new Composer(await PDFDocument.create(), src, pages, xLeft, xRight);
+    const c = new Composer(await PDFDocument.create(), src, pages, xLeft, xRight, page.margin ?? DEFAULT_MARGIN, page.height ?? PAGE_H);
     c.regular = await c.doc.embedFont(StandardFonts.Helvetica);
     c.bold = await c.doc.embedFont(StandardFonts.HelveticaBold);
     await c.importForms([...new Set(usedPages)]);
@@ -104,20 +115,20 @@ export class Composer {
   }
 
   get remaining() {
-    return this.y - MARGIN;
+    return this.y - this.margin;
   }
 
   get pageHeight() {
-    return PAGE_H - 2 * MARGIN;
+    return this.pageH - 2 * this.margin;
   }
 
   get atPageTop() {
-    return this.y === PAGE_H - MARGIN;
+    return this.y === this.pageH - this.margin;
   }
 
   newPage() {
-    this.page = this.doc.addPage([PAGE_W, PAGE_H]);
-    this.y = PAGE_H - MARGIN;
+    this.page = this.doc.addPage([PAGE_W, this.pageH]);
+    this.y = this.pageH - this.margin;
   }
 
   /** Starts a new page unless `h` points of space are left. */
@@ -131,8 +142,8 @@ export class Composer {
 
   rule() {
     this.page.drawLine({
-      start: { x: MARGIN, y: this.y },
-      end: { x: PAGE_W - MARGIN, y: this.y },
+      start: { x: this.margin, y: this.y },
+      end: { x: PAGE_W - this.margin, y: this.y },
       thickness: 0.5,
       color: rgb(0.6, 0.6, 0.6),
     });
@@ -146,11 +157,11 @@ export class Composer {
   text(text: string, opts: { size?: number; bold?: boolean; grey?: boolean } = {}) {
     const size = opts.size ?? 10;
     const font = opts.bold ? this.bold : this.regular;
-    for (const line of wrap(text, font, size, CONTENT_W)) {
+    for (const line of wrap(text, font, size, this.contentWidth)) {
       this.ensure(this.textHeight(size));
       this.y -= this.textHeight(size);
       this.page.drawText(line, {
-        x: MARGIN,
+        x: this.margin,
         y: this.y + size * 0.3,
         size,
         font,
@@ -218,10 +229,10 @@ export class Composer {
     const bottom = this.y - h;
     this.page.pushOperators(
       pushGraphicsState(),
-      rectangle(MARGIN, bottom, CONTENT_W, h),
+      rectangle(this.margin, bottom, this.contentWidth, h),
       clip(),
       endPath(),
-      concatTransformationMatrix(this.scale, 0, 0, this.scale, MARGIN - this.xLeft * this.scale, bottom - s.bottom * this.scale),
+      concatTransformationMatrix(this.scale, 0, 0, this.scale, this.margin - this.xLeft * this.scale, bottom - s.bottom * this.scale),
       drawObject(name),
       popGraphicsState(),
     );

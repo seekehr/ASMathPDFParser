@@ -5,7 +5,8 @@
   "scripts": {
     "build": "tsx --env-file-if-exists=.env src/main.ts",
     "build:no-label": "tsx --env-file-if-exists=.env src/main.ts --no-label",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test \"test/**/*.test.ts\""
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,6 @@
   },
   "homepage": "https://github.com/seekehr/ASMathPDFParser#readme",
   "dependencies": {
-    "@google/genai": "^2.27.0",
     "@napi-rs/canvas": "^1.0.10",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^6.4.299"
