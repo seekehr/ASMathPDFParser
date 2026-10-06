@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build output and caches (out/labels.md is kept: it holds the Gemini labels)
+out/*
+!out/labels.md
+.cache/
+*.tsbuildinfo
+
+# Secrets
+.env
+.env.*
+
+# Editors and tools
+.idea/
+.vscode/
+.claude/
+*.iml
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+npm-debug.log*

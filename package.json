@@ -1,0 +1,33 @@
+{
+  "name": "asmathpdfparser",
+  "version": "1.0.0",
+  "description": "Turns the 9709 hardest-questions PDF into a clean, topic-labelled Paper 3 booklet",
+  "scripts": {
+    "build": "tsx --env-file-if-exists=.env src/main.ts",
+    "build:no-label": "tsx --env-file-if-exists=.env src/main.ts --no-label",
+    "typecheck": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seekehr/ASMathPDFParser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/seekehr/ASMathPDFParser/issues"
+  },
+  "homepage": "https://github.com/seekehr/ASMathPDFParser#readme",
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "@napi-rs/canvas": "^1.0.10",
+    "pdf-lib": "^1.17.1",
+    "pdfjs-dist": "^6.4.299"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
