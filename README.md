@@ -25,14 +25,17 @@ Outputs, in `out/`:
 - `P3_questions_then_answers.pdf`: all questions first, then all comments and mark schemes
 - `labels.md`: every question with its topics, plus an index by topic
 
-`out/labels.md` is also the label cache, so the model is only called for questions with an empty Topics cell.
-To relabel, clear a cell (or delete the file). You can also fix labels there by hand and rerun.
+All three files are overwritten on every run (close the PDFs in your viewer first; Windows won't let an open
+PDF be replaced). `out/labels.md` is also the label cache, so the model is only called for questions with an
+empty Topics cell, and labels you fix there by hand are kept. To relabel one question, clear its cell; to
+relabel everything, run `npm run relabel` (about 16 of the 50 free requests a day).
 
 Labelling uses free (`:free`) vision models on OpenRouter, so it costs nothing. The maths is drawn as
 shapes, not text, so the model reads page images. Free models allow 20 requests/min and 50/day, so the
 questions are packed several per page image and sent 6 images per request: all 326 take about 17 requests.
-OpenRouter falls back to the next model in `OPENROUTER_MODELS` when one is overloaded; other errors are
-retried. If the daily limit is hit, the run stops with progress saved in `out/labels.md`; rerun later to finish.
+When a model is rate-limited or down, the next one in `OPENROUTER_MODELS` is tried (they're spread across
+upstream providers), and a model that refuses the request is dropped for the run. If the daily limit is hit,
+the run stops with progress saved in `out/labels.md`; rerun later to finish.
 
 `npm run build:no-label` builds without calling OpenRouter. See `.example.env` for optional settings.
 

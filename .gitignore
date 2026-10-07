@@ -2,7 +2,6 @@
 node_modules/
 
 # Build output and caches (out/labels.md is kept: it holds the Gemini labels)
-out/*
 !out/labels.md
 .cache/
 *.tsbuildinfo
