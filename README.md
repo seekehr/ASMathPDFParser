@@ -1,50 +1,45 @@
 # ASMathPDFParser
 
-Turns `public/9709_hardest_questions_v2.pdf` (541 questions, 1636 pages) into a plain, topic-labelled
-Paper 3 booklet:
+Cleans up the CAIE 9709 "hardest questions" PDF into a Paper 3 booklet you can actually study from, with every question tagged by topic.
 
-- Paper 1 questions are dropped (326 Paper 3 questions remain).
-- The watermark, badges, coloured headers, footers and cover/preface are removed, and the content
-  is repacked onto A4 pages, so it's around 316 pages instead of 1636. Maths stays vector (sharp, selectable).
-- Each question comes first, then the examiner comment, then the mark scheme.
-- A free vision model on OpenRouter tags each question with one or more of: Algebra; Indices, Logarithms & Exponents;
-  Trigonometry; Differentiation; Integration; Differential Equations; Complex Numbers;
-  Numerical Solutions/Iteration. A topic index is on page 1.
+<p>
+  <img src="public/preview_pdf.png" alt="A question in the cleaned-up PDF, with its topics, examiner comment and mark scheme" width="49%">
+  <img src="public/preview_md.png" alt="The topic table in out/labels.md" width="49%">
+</p>
 
-## Usage
+What it does to the original 1636-page PDF:
+
+- Drops the Paper 1 questions and keeps the 326 from Paper 3.
+- Strips the watermark, badges, headers and footers, and packs the content onto plain A4 pages (about 316 pages). The maths stays sharp.
+- Shows each question first, then the examiner's comment, then the mark scheme.
+- Tags each question with one or more topics using a free AI model: Algebra; Indices, Logarithms & Exponents; Trigonometry; Differentiation; Integration; Differential Equations; Complex Numbers; Numerical Solutions/Iteration.
+
+## Setup
+
+You need Node.js 22 or newer and a free [OpenRouter API key](https://openrouter.ai/keys).
 
 ```bash
 npm install
-cp .example.env .env   # then put your OpenRouter API key in .env
+cp .example.env .env
+```
+
+Put your key in `.env` after `OPENROUTER_API_KEY=`, then run:
+
+```bash
 npm run build
 ```
 
-Outputs, in `out/`:
+The first run takes a few minutes. You'll get three files in `out/`:
 
-- `P3_hardest_questions.pdf`: question, then comment, then mark scheme, for each question
-- `P3_questions_then_answers.pdf`: all questions first, then all comments and mark schemes
-- `labels.md`: every question with its topics, plus an index by topic
+- `P3_hardest_questions.pdf`: each question followed by its comment and mark scheme
+- `P3_questions_then_answers.pdf`: all the questions first, with comments and mark schemes at the back
+- `labels.md`: every question and its topics, plus a list of questions by topic
 
-All three files are overwritten on every run (close the PDFs in your viewer first; Windows won't let an open
-PDF be replaced). `out/labels.md` is also the label cache, so the model is only called for questions with an
-empty Topics cell, and labels you fix there by hand are kept. To relabel one question, clear its cell; to
-relabel everything, run `npm run relabel` (about 16 of the 50 free requests a day).
+## Good to know
 
-Labelling uses free (`:free`) vision models on OpenRouter, so it costs nothing. The maths is drawn as
-shapes, not text, so the model reads page images. Free models allow 20 requests/min and 50/day, so the
-questions are packed several per page image and sent 6 images per request: all 326 take about 17 requests.
-When a model is rate-limited or down, the next one in `OPENROUTER_MODELS` is tried (they're spread across
-upstream providers), and a model that refuses the request is dropped for the run. If the daily limit is hit,
-the run stops with progress saved in `out/labels.md`; rerun later to finish.
-
-`npm run build:no-label` builds without calling OpenRouter. See `.example.env` for optional settings.
-
-## Testing without AI
-
-- `npm test` runs unit tests for the parts that don't need a model: grouping pages into questions,
-  cropping and page layout, reading and writing `out/labels.md`, request batching, and reply parsing.
-- `npm run build:no-label` runs the whole pipeline except labelling and writes the PDFs to `out/`, with
-  any labels already in `out/labels.md`.
-- `npm run typecheck` checks types.
-
-The first run renders every page to find where the content is (around 3 minutes). The result is cached in `.cache/`.
+- Every run overwrites the files in `out/`. Close the PDFs first, or Windows won't let them be replaced.
+- Labels are saved in `out/labels.md` and reused, so only new or cleared questions go to the AI. You can fix a label by editing that file. `npm run relabel` labels everything again from scratch.
+- Free models allow 50 requests a day, and a full labelling run uses about 16. If you hit the limit, progress is saved; just run it again later.
+- `npm run build:no-label` builds the PDFs without calling the AI.
+- `npm test` runs the tests, and `npm run typecheck` checks types. Neither needs the AI.
+- Optional settings (models to use, images per request) are listed in `.example.env`.
