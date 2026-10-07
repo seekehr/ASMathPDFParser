@@ -109,259 +109,259 @@ Separate topics with `;`. `-` means none of the topics apply; leave the cell emp
 | 102 | Oct/Nov 2020 P3 v33 Q5 | Trigonometry; Numerical Solutions/Iteration |
 | 103 | Oct/Nov 2020 P3 v33 Q7 | Algebra; Complex Numbers |
 | 104 | Oct/Nov 2020 P3 v33 Q9 | Algebra |
-| 105 | Oct/Nov 2020 P3 v33 Q10 |  |
-| 106 | Feb/Mar 2019 P3 v32 Q2 |  |
-| 107 | Feb/Mar 2019 P3 v32 Q3 |  |
-| 108 | Feb/Mar 2019 P3 v32 Q5 |  |
-| 109 | May/June 2019 P3 v31 Q1 |  |
-| 110 | May/June 2019 P3 v31 Q2 |  |
-| 111 | May/June 2019 P3 v31 Q3 |  |
-| 112 | May/June 2019 P3 v31 Q4 |  |
-| 113 | May/June 2019 P3 v31 Q6 |  |
-| 114 | May/June 2019 P3 v32 Q1 |  |
-| 115 | May/June 2019 P3 v32 Q2 |  |
-| 116 | May/June 2019 P3 v32 Q5 |  |
-| 117 | May/June 2019 P3 v32 Q6 |  |
-| 118 | May/June 2019 P3 v32 Q9 |  |
-| 119 | May/June 2019 P3 v33 Q1 |  |
-| 120 | May/June 2019 P3 v33 Q4 |  |
-| 121 | Oct/Nov 2019 P3 v31 Q1 |  |
-| 122 | Oct/Nov 2019 P3 v31 Q4 |  |
-| 123 | Oct/Nov 2019 P3 v31 Q7 |  |
-| 124 | Oct/Nov 2019 P3 v31 Q8 |  |
-| 125 | Oct/Nov 2019 P3 v32 Q2 |  |
-| 126 | Oct/Nov 2019 P3 v32 Q3 |  |
-| 127 | Oct/Nov 2019 P3 v32 Q4 |  |
-| 128 | Oct/Nov 2019 P3 v32 Q6 |  |
-| 129 | Oct/Nov 2019 P3 v32 Q7 |  |
-| 130 | Oct/Nov 2019 P3 v32 Q8 |  |
-| 131 | Oct/Nov 2019 P3 v33 Q2 |  |
-| 132 | Oct/Nov 2019 P3 v33 Q4 |  |
-| 133 | Oct/Nov 2019 P3 v33 Q5 |  |
-| 134 | Oct/Nov 2019 P3 v33 Q8 |  |
-| 135 | Oct/Nov 2019 P3 v33 Q9 |  |
-| 136 | Oct/Nov 2019 P3 v33 Q10 |  |
-| 137 | Feb/Mar 2018 P3 v32 Q3 |  |
-| 138 | Feb/Mar 2018 P3 v32 Q4 |  |
-| 139 | Feb/Mar 2018 P3 v32 Q5 |  |
-| 140 | Feb/Mar 2018 P3 v32 Q6 |  |
-| 141 | Feb/Mar 2018 P3 v32 Q7 |  |
-| 142 | Feb/Mar 2018 P3 v32 Q9 |  |
-| 143 | May/June 2018 P3 v31 Q1 |  |
-| 144 | May/June 2018 P3 v31 Q2 |  |
-| 145 | May/June 2018 P3 v31 Q5 |  |
-| 146 | May/June 2018 P3 v31 Q6 |  |
-| 147 | May/June 2018 P3 v31 Q7 |  |
-| 148 | May/June 2018 P3 v31 Q8 |  |
-| 149 | May/June 2018 P3 v31 Q10 |  |
-| 150 | May/June 2018 P3 v32 Q1 |  |
-| 151 | May/June 2018 P3 v32 Q2 |  |
-| 152 | May/June 2018 P3 v32 Q4 |  |
-| 153 | May/June 2018 P3 v32 Q5 |  |
-| 154 | May/June 2018 P3 v32 Q6 |  |
-| 155 | May/June 2018 P3 v32 Q7 |  |
-| 156 | May/June 2018 P3 v33 Q1 |  |
-| 157 | May/June 2018 P3 v33 Q5 |  |
-| 158 | May/June 2018 P3 v33 Q6 |  |
-| 159 | May/June 2018 P3 v33 Q8 |  |
-| 160 | May/June 2018 P3 v33 Q9 |  |
-| 161 | May/June 2018 P3 v33 Q10 |  |
-| 162 | Oct/Nov 2018 P3 v31 Q1 |  |
-| 163 | Oct/Nov 2018 P3 v31 Q2 |  |
-| 164 | Oct/Nov 2018 P3 v31 Q3 |  |
-| 165 | Oct/Nov 2018 P3 v31 Q5 |  |
-| 166 | Oct/Nov 2018 P3 v31 Q6 |  |
-| 167 | Oct/Nov 2018 P3 v31 Q7 |  |
-| 168 | Oct/Nov 2018 P3 v31 Q8 |  |
-| 169 | Oct/Nov 2018 P3 v31 Q10 |  |
-| 170 | Oct/Nov 2018 P3 v32 Q1 |  |
-| 171 | Oct/Nov 2018 P3 v32 Q4 |  |
-| 172 | Oct/Nov 2018 P3 v32 Q6 |  |
-| 173 | Oct/Nov 2018 P3 v32 Q7 |  |
-| 174 | Oct/Nov 2018 P3 v32 Q9 |  |
-| 175 | Oct/Nov 2018 P3 v32 Q10 |  |
-| 176 | Oct/Nov 2018 P3 v33 Q1 |  |
-| 177 | Oct/Nov 2018 P3 v33 Q2 |  |
-| 178 | Oct/Nov 2018 P3 v33 Q3 |  |
-| 179 | Oct/Nov 2018 P3 v33 Q5 |  |
-| 180 | Oct/Nov 2018 P3 v33 Q6 |  |
-| 181 | Oct/Nov 2018 P3 v33 Q7 |  |
-| 182 | Oct/Nov 2018 P3 v33 Q8 |  |
-| 183 | Oct/Nov 2018 P3 v33 Q10 |  |
-| 184 | Feb/Mar 2017 P3 v32 Q1 |  |
-| 185 | Feb/Mar 2017 P3 v32 Q4 |  |
-| 186 | Feb/Mar 2017 P3 v32 Q5 |  |
-| 187 | Feb/Mar 2017 P3 v32 Q7 |  |
-| 188 | Feb/Mar 2017 P3 v32 Q8 |  |
-| 189 | May/June 2017 P3 v31 Q2 |  |
-| 190 | May/June 2017 P3 v31 Q3 |  |
-| 191 | May/June 2017 P3 v31 Q4 |  |
-| 192 | May/June 2017 P3 v31 Q5 |  |
-| 193 | May/June 2017 P3 v31 Q6 |  |
-| 194 | May/June 2017 P3 v31 Q7 |  |
-| 195 | May/June 2017 P3 v32 Q1 |  |
-| 196 | May/June 2017 P3 v32 Q2 |  |
-| 197 | May/June 2017 P3 v32 Q3 |  |
-| 198 | May/June 2017 P3 v32 Q4 |  |
-| 199 | May/June 2017 P3 v32 Q5 |  |
-| 200 | May/June 2017 P3 v32 Q7 |  |
-| 201 | May/June 2017 P3 v32 Q8 |  |
-| 202 | May/June 2017 P3 v32 Q9 |  |
-| 203 | May/June 2017 P3 v32 Q10 |  |
-| 204 | May/June 2017 P3 v33 Q3 |  |
-| 205 | May/June 2017 P3 v33 Q5 |  |
-| 206 | May/June 2017 P3 v33 Q6 |  |
-| 207 | May/June 2017 P3 v33 Q7 |  |
-| 208 | May/June 2017 P3 v33 Q8 |  |
-| 209 | May/June 2017 P3 v33 Q9 |  |
-| 210 | Oct/Nov 2017 P3 v31 Q2 |  |
-| 211 | Oct/Nov 2017 P3 v31 Q4 |  |
-| 212 | Oct/Nov 2017 P3 v31 Q6 |  |
-| 213 | Oct/Nov 2017 P3 v32 Q1 |  |
-| 214 | Oct/Nov 2017 P3 v32 Q2 |  |
-| 215 | Oct/Nov 2017 P3 v32 Q6 |  |
-| 216 | Oct/Nov 2017 P3 v32 Q8 |  |
-| 217 | Oct/Nov 2017 P3 v32 Q9 |  |
-| 218 | Oct/Nov 2017 P3 v33 Q4 |  |
-| 219 | Oct/Nov 2017 P3 v33 Q6 |  |
-| 220 | Feb/Mar 2016 P3 v32 Q4 |  |
-| 221 | Feb/Mar 2016 P3 v32 Q8 |  |
-| 222 | Feb/Mar 2016 P3 v32 Q9 |  |
-| 223 | May/June 2016 P3 v31 Q6 |  |
-| 224 | May/June 2016 P3 v31 Q7 |  |
-| 225 | May/June 2016 P3 v31 Q9 |  |
-| 226 | May/June 2016 P3 v31 Q10 |  |
-| 227 | May/June 2016 P3 v32 Q1 |  |
-| 228 | May/June 2016 P3 v32 Q9 |  |
-| 229 | May/June 2016 P3 v32 Q10 |  |
-| 230 | May/June 2016 P3 v33 Q5 |  |
-| 231 | Oct/Nov 2016 P3 v31 Q1 |  |
-| 232 | Oct/Nov 2016 P3 v31 Q2 |  |
-| 233 | Oct/Nov 2016 P3 v31 Q4 |  |
-| 234 | Oct/Nov 2016 P3 v31 Q5 |  |
-| 235 | Oct/Nov 2016 P3 v31 Q6 |  |
-| 236 | Oct/Nov 2016 P3 v31 Q7 |  |
-| 237 | Oct/Nov 2016 P3 v31 Q8 |  |
-| 238 | Oct/Nov 2016 P3 v31 Q9 |  |
-| 239 | Oct/Nov 2016 P3 v31 Q10 |  |
-| 240 | Oct/Nov 2016 P3 v32 Q1 |  |
-| 241 | Oct/Nov 2016 P3 v32 Q2 |  |
-| 242 | Oct/Nov 2016 P3 v32 Q4 |  |
-| 243 | Oct/Nov 2016 P3 v32 Q5 |  |
-| 244 | Oct/Nov 2016 P3 v32 Q6 |  |
-| 245 | Oct/Nov 2016 P3 v32 Q7 |  |
-| 246 | Oct/Nov 2016 P3 v32 Q8 |  |
-| 247 | Oct/Nov 2016 P3 v32 Q9 |  |
-| 248 | Oct/Nov 2016 P3 v32 Q10 |  |
-| 249 | Oct/Nov 2016 P3 v33 Q1 |  |
-| 250 | Oct/Nov 2016 P3 v33 Q4 |  |
-| 251 | Oct/Nov 2016 P3 v33 Q8 |  |
-| 252 | Oct/Nov 2016 P3 v33 Q10 |  |
-| 253 | May/June 2015 P3 v31 Q2 |  |
-| 254 | May/June 2015 P3 v31 Q3 |  |
-| 255 | May/June 2015 P3 v31 Q9 |  |
-| 256 | Oct/Nov 2015 P3 v31 Q4 |  |
-| 257 | Oct/Nov 2015 P3 v31 Q6 |  |
-| 258 | Oct/Nov 2015 P3 v32 Q4 |  |
-| 259 | Oct/Nov 2015 P3 v32 Q6 |  |
-| 260 | Oct/Nov 2015 P3 v33 Q2 |  |
-| 261 | Oct/Nov 2015 P3 v33 Q6 |  |
-| 262 | Oct/Nov 2015 P3 v33 Q7 |  |
-| 263 | Oct/Nov 2015 P3 v33 Q9 |  |
-| 264 | Oct/Nov 2015 P3 v33 Q10 |  |
-| 265 | May/June 2014 P3 v31 Q1 |  |
-| 266 | May/June 2014 P3 v31 Q4 |  |
-| 267 | May/June 2014 P3 v31 Q6 |  |
-| 268 | May/June 2014 P3 v31 Q8 |  |
-| 269 | Oct/Nov 2014 P3 v31 Q2 |  |
-| 270 | Oct/Nov 2014 P3 v31 Q4 |  |
-| 271 | Oct/Nov 2014 P3 v31 Q5 |  |
-| 272 | Oct/Nov 2014 P3 v31 Q6 |  |
-| 273 | Oct/Nov 2014 P3 v33 Q2 |  |
-| 274 | Oct/Nov 2014 P3 v33 Q5 |  |
-| 275 | Oct/Nov 2014 P3 v33 Q6 |  |
-| 276 | Oct/Nov 2014 P3 v33 Q8 |  |
-| 277 | Oct/Nov 2014 P3 v33 Q9 |  |
-| 278 | May/June 2013 P3 v31 Q1 |  |
-| 279 | May/June 2013 P3 v31 Q4 |  |
-| 280 | May/June 2013 P3 v31 Q6 |  |
-| 281 | May/June 2013 P3 v31 Q7 |  |
-| 282 | May/June 2013 P3 v31 Q8 |  |
-| 283 | May/June 2013 P3 v31 Q9 |  |
-| 284 | May/June 2013 P3 v31 Q10 |  |
-| 285 | Oct/Nov 2013 P3 v32 Q6 |  |
-| 286 | Oct/Nov 2013 P3 v32 Q10 |  |
-| 287 | May/June 2012 P3 v31 Q1 |  |
-| 288 | May/June 2012 P3 v31 Q3 |  |
-| 289 | May/June 2012 P3 v31 Q5 |  |
-| 290 | May/June 2012 P3 v31 Q6 |  |
-| 291 | May/June 2012 P3 v31 Q8 |  |
-| 292 | May/June 2012 P3 v31 Q9 |  |
-| 293 | Oct/Nov 2012 P3 v31 Q2 |  |
-| 294 | Oct/Nov 2012 P3 v31 Q5 |  |
-| 295 | Oct/Nov 2012 P3 v31 Q6 |  |
-| 296 | Oct/Nov 2012 P3 v31 Q7 |  |
-| 297 | Oct/Nov 2012 P3 v31 Q10 |  |
-| 298 | May/June 2011 P3 v31 Q3 |  |
-| 299 | May/June 2011 P3 v31 Q4 |  |
-| 300 | May/June 2011 P3 v31 Q6 |  |
-| 301 | May/June 2011 P3 v31 Q9 |  |
-| 302 | May/June 2010 P3 v31 Q1 |  |
-| 303 | May/June 2010 P3 v31 Q4 |  |
-| 304 | May/June 2010 P3 v31 Q6 |  |
-| 305 | May/June 2010 P3 v31 Q7 |  |
-| 306 | May/June 2010 P3 v31 Q10 |  |
-| 307 | Oct/Nov 2010 P3 v31 Q2 |  |
-| 308 | Oct/Nov 2010 P3 v31 Q3 |  |
-| 309 | Oct/Nov 2010 P3 v31 Q5 |  |
-| 310 | Oct/Nov 2010 P3 v31 Q7 |  |
-| 311 | Oct/Nov 2010 P3 v32 Q2 |  |
-| 312 | Oct/Nov 2010 P3 v32 Q3 |  |
-| 313 | Oct/Nov 2010 P3 v32 Q5 |  |
-| 314 | Oct/Nov 2010 P3 v32 Q10 |  |
-| 315 | Oct/Nov 2010 P3 v33 Q1 |  |
-| 316 | Oct/Nov 2010 P3 v33 Q2 |  |
-| 317 | Oct/Nov 2010 P3 v33 Q4 |  |
-| 318 | Oct/Nov 2010 P3 v33 Q7 |  |
-| 319 | Oct/Nov 2010 P3 v33 Q8 |  |
-| 320 | Oct/Nov 2010 P3 v33 Q9 |  |
-| 321 | Oct/Nov 2009 P3 v32 Q3 |  |
-| 322 | Oct/Nov 2009 P3 v32 Q5 |  |
-| 323 | Oct/Nov 2009 P3 v32 Q6 |  |
-| 324 | Oct/Nov 2009 P3 v32 Q8 |  |
-| 325 | Oct/Nov 2009 P3 v32 Q9 |  |
-| 326 | Oct/Nov 2017 P3 v33 Q2 |  |
+| 105 | Oct/Nov 2020 P3 v33 Q10 | Differentiation; Integration |
+| 106 | Feb/Mar 2019 P3 v32 Q2 | Numerical Solutions/Iteration |
+| 107 | Feb/Mar 2019 P3 v32 Q3 | Trigonometry |
+| 108 | Feb/Mar 2019 P3 v32 Q5 | Differentiation |
+| 109 | May/June 2019 P3 v31 Q1 | Integration |
+| 110 | May/June 2019 P3 v31 Q2 | Algebra; Indices, Logarithms & Exponents |
+| 111 | May/June 2019 P3 v31 Q3 | Differentiation |
+| 112 | May/June 2019 P3 v31 Q4 | Trigonometry |
+| 113 | May/June 2019 P3 v31 Q6 | Trigonometry; Integration |
+| 114 | May/June 2019 P3 v32 Q1 | Algebra |
+| 115 | May/June 2019 P3 v32 Q2 | Algebra; Indices, Logarithms & Exponents |
+| 116 | May/June 2019 P3 v32 Q5 | Algebra; Complex Numbers |
+| 117 | May/June 2019 P3 v32 Q6 | Trigonometry; Numerical Solutions/Iteration |
+| 118 | May/June 2019 P3 v32 Q9 | - |
+| 119 | May/June 2019 P3 v33 Q1 | Indices, Logarithms & Exponents |
+| 120 | May/June 2019 P3 v33 Q4 | Indices, Logarithms & Exponents; Differentiation |
+| 121 | Oct/Nov 2019 P3 v31 Q1 | Indices, Logarithms & Exponents |
+| 122 | Oct/Nov 2019 P3 v31 Q4 | Differential Equations |
+| 123 | Oct/Nov 2019 P3 v31 Q7 | - |
+| 124 | Oct/Nov 2019 P3 v31 Q8 | Algebra; Integration |
+| 125 | Oct/Nov 2019 P3 v32 Q2 | Algebra; Differentiation |
+| 126 | Oct/Nov 2019 P3 v32 Q3 | Indices, Logarithms & Exponents |
+| 127 | Oct/Nov 2019 P3 v32 Q4 | Trigonometry |
+| 128 | Oct/Nov 2019 P3 v32 Q6 | Differential Equations |
+| 129 | Oct/Nov 2019 P3 v32 Q7 | Complex Numbers |
+| 130 | Oct/Nov 2019 P3 v32 Q8 | Algebra; Integration |
+| 131 | Oct/Nov 2019 P3 v33 Q2 | Algebra |
+| 132 | Oct/Nov 2019 P3 v33 Q4 | Trigonometry |
+| 133 | Oct/Nov 2019 P3 v33 Q5 | Indices, Logarithms & Exponents; Numerical Solutions/Iteration |
+| 134 | Oct/Nov 2019 P3 v33 Q8 | Trigonometry; Differentiation; Integration |
+| 135 | Oct/Nov 2019 P3 v33 Q9 | Algebra; Integration; Differential Equations |
+| 136 | Oct/Nov 2019 P3 v33 Q10 | Trigonometry; Differentiation; Integration |
+| 137 | Feb/Mar 2018 P3 v32 Q3 | Trigonometry; Integration |
+| 138 | Feb/Mar 2018 P3 v32 Q4 | Indices, Logarithms & Exponents |
+| 139 | Feb/Mar 2018 P3 v32 Q5 | Trigonometry; Differentiation |
+| 140 | Feb/Mar 2018 P3 v32 Q6 | Trigonometry; Differentiation; Integration; Differential Equations |
+| 141 | Feb/Mar 2018 P3 v32 Q7 | Indices, Logarithms & Exponents; Numerical Solutions/Iteration |
+| 142 | Feb/Mar 2018 P3 v32 Q9 | Algebra; Complex Numbers |
+| 143 | May/June 2018 P3 v31 Q1 | Indices, Logarithms & Exponents |
+| 144 | May/June 2018 P3 v31 Q2 | Trigonometry |
+| 145 | May/June 2018 P3 v31 Q5 | Trigonometry; Integration |
+| 146 | May/June 2018 P3 v31 Q6 | Integration; Differential Equations |
+| 147 | May/June 2018 P3 v31 Q7 | Algebra; Complex Numbers |
+| 148 | May/June 2018 P3 v31 Q8 | Indices, Logarithms & Exponents; Integration; Numerical Solutions/Iteration |
+| 149 | May/June 2018 P3 v31 Q10 | - |
+| 150 | May/June 2018 P3 v32 Q1 | Algebra; Indices, Logarithms & Exponents |
+| 151 | May/June 2018 P3 v32 Q2 | Trigonometry |
+| 152 | May/June 2018 P3 v32 Q4 | Trigonometry; Integration |
+| 153 | May/June 2018 P3 v32 Q5 | Algebra; Differentiation |
+| 154 | May/June 2018 P3 v32 Q6 | Trigonometry; Numerical Solutions/Iteration |
+| 155 | May/June 2018 P3 v32 Q7 | Complex Numbers |
+| 156 | May/June 2018 P3 v33 Q1 | Algebra |
+| 157 | May/June 2018 P3 v33 Q5 | Trigonometry |
+| 158 | May/June 2018 P3 v33 Q6 | Algebra; Integration; Differential Equations |
+| 159 | May/June 2018 P3 v33 Q8 | Algebra; Differentiation |
+| 160 | May/June 2018 P3 v33 Q9 | Complex Numbers |
+| 161 | May/June 2018 P3 v33 Q10 | - |
+| 162 | Oct/Nov 2018 P3 v31 Q1 | Algebra |
+| 163 | Oct/Nov 2018 P3 v31 Q2 | Indices, Logarithms & Exponents |
+| 164 | Oct/Nov 2018 P3 v31 Q3 | Algebra; Numerical Solutions/Iteration |
+| 165 | Oct/Nov 2018 P3 v31 Q5 | Differential Equations |
+| 166 | Oct/Nov 2018 P3 v31 Q6 | Trigonometry |
+| 167 | Oct/Nov 2018 P3 v31 Q7 | Trigonometry; Differentiation; Integration |
+| 168 | Oct/Nov 2018 P3 v31 Q8 | Complex Numbers |
+| 169 | Oct/Nov 2018 P3 v31 Q10 | - |
+| 170 | Oct/Nov 2018 P3 v32 Q1 | Algebra |
+| 171 | Oct/Nov 2018 P3 v32 Q4 | Indices, Logarithms & Exponents |
+| 172 | Oct/Nov 2018 P3 v32 Q6 | Differential Equations |
+| 173 | Oct/Nov 2018 P3 v32 Q7 | Trigonometry; Differentiation; Numerical Solutions/Iteration |
+| 174 | Oct/Nov 2018 P3 v32 Q9 | Differentiation; Integration |
+| 175 | Oct/Nov 2018 P3 v32 Q10 | - |
+| 176 | Oct/Nov 2018 P3 v33 Q1 | Algebra |
+| 177 | Oct/Nov 2018 P3 v33 Q2 | Indices, Logarithms & Exponents |
+| 178 | Oct/Nov 2018 P3 v33 Q3 | Numerical Solutions/Iteration |
+| 179 | Oct/Nov 2018 P3 v33 Q5 | Differential Equations |
+| 180 | Oct/Nov 2018 P3 v33 Q6 | Trigonometry |
+| 181 | Oct/Nov 2018 P3 v33 Q7 | Trigonometry; Differentiation; Integration |
+| 182 | Oct/Nov 2018 P3 v33 Q8 | Complex Numbers |
+| 183 | Oct/Nov 2018 P3 v33 Q10 | - |
+| 184 | Feb/Mar 2017 P3 v32 Q1 | Indices, Logarithms & Exponents |
+| 185 | Feb/Mar 2017 P3 v32 Q4 | Trigonometry |
+| 186 | Feb/Mar 2017 P3 v32 Q5 | Trigonometry; Differentiation |
+| 187 | Feb/Mar 2017 P3 v32 Q7 | Integration; Differential Equations |
+| 188 | Feb/Mar 2017 P3 v32 Q8 | Algebra; Complex Numbers |
+| 189 | May/June 2017 P3 v31 Q2 | Algebra |
+| 190 | May/June 2017 P3 v31 Q3 | Indices, Logarithms & Exponents; Integration |
+| 191 | May/June 2017 P3 v31 Q4 | Trigonometry; Differentiation |
+| 192 | May/June 2017 P3 v31 Q5 | Trigonometry; Numerical Solutions/Iteration |
+| 193 | May/June 2017 P3 v31 Q6 | - |
+| 194 | May/June 2017 P3 v31 Q7 | Complex Numbers |
+| 195 | May/June 2017 P3 v32 Q1 | Indices, Logarithms & Exponents |
+| 196 | May/June 2017 P3 v32 Q2 | Algebra |
+| 197 | May/June 2017 P3 v32 Q3 | Trigonometry |
+| 198 | May/June 2017 P3 v32 Q4 | Differentiation |
+| 199 | May/June 2017 P3 v32 Q5 | Indices, Logarithms & Exponents; Integration; Differential Equations |
+| 200 | May/June 2017 P3 v32 Q7 | Trigonometry; Differentiation; Integration |
+| 201 | May/June 2017 P3 v32 Q8 | Algebra |
+| 202 | May/June 2017 P3 v32 Q9 | - |
+| 203 | May/June 2017 P3 v32 Q10 | Trigonometry; Differentiation; Integration; Numerical Solutions/Iteration |
+| 204 | May/June 2017 P3 v33 Q3 | Indices, Logarithms & Exponents |
+| 205 | May/June 2017 P3 v33 Q5 | Indices, Logarithms & Exponents; Trigonometry; Differentiation |
+| 206 | May/June 2017 P3 v33 Q6 | Trigonometry; Numerical Solutions/Iteration |
+| 207 | May/June 2017 P3 v33 Q7 | Differentiation; Integration |
+| 208 | May/June 2017 P3 v33 Q8 | Indices, Logarithms & Exponents; Integration; Differential Equations |
+| 209 | May/June 2017 P3 v33 Q9 | Algebra; Indices, Logarithms & Exponents; Integration |
+| 210 | Oct/Nov 2017 P3 v31 Q2 | Indices, Logarithms & Exponents |
+| 211 | Oct/Nov 2017 P3 v31 Q4 | Trigonometry |
+| 212 | Oct/Nov 2017 P3 v31 Q6 | Indices, Logarithms & Exponents; Trigonometry; Integration; Differential Equations |
+| 213 | Oct/Nov 2017 P3 v32 Q1 | Integration |
+| 214 | Oct/Nov 2017 P3 v32 Q2 | Indices, Logarithms & Exponents |
+| 215 | Oct/Nov 2017 P3 v32 Q6 | Algebra; Differentiation |
+| 216 | Oct/Nov 2017 P3 v32 Q8 | Algebra |
+| 217 | Oct/Nov 2017 P3 v32 Q9 | Indices, Logarithms & Exponents; Integration; Numerical Solutions/Iteration |
+| 218 | Oct/Nov 2017 P3 v33 Q4 | Trigonometry |
+| 219 | Oct/Nov 2017 P3 v33 Q6 | Trigonometry; Differential Equations |
+| 220 | Feb/Mar 2016 P3 v32 Q4 | Algebra |
+| 221 | Feb/Mar 2016 P3 v32 Q8 | - |
+| 222 | Feb/Mar 2016 P3 v32 Q9 | Algebra; Integration |
+| 223 | May/June 2016 P3 v31 Q6 | Indices, Logarithms & Exponents; Numerical Solutions/Iteration |
+| 224 | May/June 2016 P3 v31 Q7 | Algebra; Differentiation |
+| 225 | May/June 2016 P3 v31 Q9 | - |
+| 226 | May/June 2016 P3 v31 Q10 | Complex Numbers |
+| 227 | May/June 2016 P3 v32 Q1 | Indices, Logarithms & Exponents |
+| 228 | May/June 2016 P3 v32 Q9 | - |
+| 229 | May/June 2016 P3 v32 Q10 | Complex Numbers |
+| 230 | May/June 2016 P3 v33 Q5 | Trigonometry; Differential Equations |
+| 231 | Oct/Nov 2016 P3 v31 Q1 | Indices, Logarithms & Exponents |
+| 232 | Oct/Nov 2016 P3 v31 Q2 | Algebra |
+| 233 | Oct/Nov 2016 P3 v31 Q4 | Algebra; Differentiation |
+| 234 | Oct/Nov 2016 P3 v31 Q5 | Trigonometry; Integration |
+| 235 | Oct/Nov 2016 P3 v31 Q6 | Trigonometry; Numerical Solutions/Iteration |
+| 236 | Oct/Nov 2016 P3 v31 Q7 | Differentiation; Integration |
+| 237 | Oct/Nov 2016 P3 v31 Q8 | - |
+| 238 | Oct/Nov 2016 P3 v31 Q9 | Complex Numbers |
+| 239 | Oct/Nov 2016 P3 v31 Q10 | Differential Equations |
+| 240 | Oct/Nov 2016 P3 v32 Q1 | Indices, Logarithms & Exponents |
+| 241 | Oct/Nov 2016 P3 v32 Q2 | Algebra |
+| 242 | Oct/Nov 2016 P3 v32 Q4 | Differentiation |
+| 243 | Oct/Nov 2016 P3 v32 Q5 | Trigonometry; Integration |
+| 244 | Oct/Nov 2016 P3 v32 Q6 | Trigonometry; Numerical Solutions/Iteration |
+| 245 | Oct/Nov 2016 P3 v32 Q7 | Differentiation; Integration |
+| 246 | Oct/Nov 2016 P3 v32 Q8 | - |
+| 247 | Oct/Nov 2016 P3 v32 Q9 | Complex Numbers |
+| 248 | Oct/Nov 2016 P3 v32 Q10 | Differential Equations |
+| 249 | Oct/Nov 2016 P3 v33 Q1 | Indices, Logarithms & Exponents |
+| 250 | Oct/Nov 2016 P3 v33 Q4 | Algebra |
+| 251 | Oct/Nov 2016 P3 v33 Q8 | Algebra |
+| 252 | Oct/Nov 2016 P3 v33 Q10 | - |
+| 253 | May/June 2015 P3 v31 Q2 | Numerical Solutions/Iteration |
+| 254 | May/June 2015 P3 v31 Q3 | Algebra |
+| 255 | May/June 2015 P3 v31 Q9 | Differentiation; Integration |
+| 256 | Oct/Nov 2015 P3 v31 Q4 | Numerical Solutions/Iteration |
+| 257 | Oct/Nov 2015 P3 v31 Q6 | Algebra |
+| 258 | Oct/Nov 2015 P3 v32 Q4 | Numerical Solutions/Iteration |
+| 259 | Oct/Nov 2015 P3 v32 Q6 | Algebra |
+| 260 | Oct/Nov 2015 P3 v33 Q2 | Algebra |
+| 261 | Oct/Nov 2015 P3 v33 Q6 | Trigonometry |
+| 262 | Oct/Nov 2015 P3 v33 Q7 | Algebra; Integration |
+| 263 | Oct/Nov 2015 P3 v33 Q9 | Complex Numbers |
+| 264 | Oct/Nov 2015 P3 v33 Q10 | Differential Equations |
+| 265 | May/June 2014 P3 v31 Q1 | Trigonometry |
+| 266 | May/June 2014 P3 v31 Q4 | Differential Equations |
+| 267 | May/June 2014 P3 v31 Q6 | Algebra; Indices, Logarithms & Exponents |
+| 268 | May/June 2014 P3 v31 Q8 | Trigonometry; Numerical Solutions/Iteration |
+| 269 | Oct/Nov 2014 P3 v31 Q2 | Trigonometry; Integration |
+| 270 | Oct/Nov 2014 P3 v31 Q4 | Differentiation |
+| 271 | Oct/Nov 2014 P3 v31 Q5 | Complex Numbers |
+| 272 | Oct/Nov 2014 P3 v31 Q6 | Indices, Logarithms & Exponents; Integration; Numerical Solutions/Iteration |
+| 273 | Oct/Nov 2014 P3 v33 Q2 | Differentiation |
+| 274 | Oct/Nov 2014 P3 v33 Q5 | Trigonometry; Complex Numbers |
+| 275 | Oct/Nov 2014 P3 v33 Q6 | Algebra; Integration |
+| 276 | Oct/Nov 2014 P3 v33 Q8 | Differential Equations |
+| 277 | Oct/Nov 2014 P3 v33 Q9 | Indices, Logarithms & Exponents; Numerical Solutions/Iteration |
+| 278 | May/June 2013 P3 v31 Q1 | Algebra |
+| 279 | May/June 2013 P3 v31 Q4 | Algebra; Indices, Logarithms & Exponents |
+| 280 | May/June 2013 P3 v31 Q6 | - |
+| 281 | May/June 2013 P3 v31 Q7 | Complex Numbers |
+| 282 | May/June 2013 P3 v31 Q8 | Integration |
+| 283 | May/June 2013 P3 v31 Q9 | Trigonometry; Integration |
+| 284 | May/June 2013 P3 v31 Q10 | Differential Equations; Numerical Solutions/Iteration |
+| 285 | Oct/Nov 2013 P3 v32 Q6 | Differential Equations |
+| 286 | Oct/Nov 2013 P3 v32 Q10 | Differential Equations |
+| 287 | May/June 2012 P3 v31 Q1 | Algebra |
+| 288 | May/June 2012 P3 v31 Q3 | Algebra |
+| 289 | May/June 2012 P3 v31 Q5 | Trigonometry; Differentiation; Integration |
+| 290 | May/June 2012 P3 v31 Q6 | Differentiation |
+| 291 | May/June 2012 P3 v31 Q8 | - |
+| 292 | May/June 2012 P3 v31 Q9 | Algebra; Integration |
+| 293 | Oct/Nov 2012 P3 v31 Q2 | Indices, Logarithms & Exponents |
+| 294 | Oct/Nov 2012 P3 v31 Q5 | Trigonometry; Differentiation; Integration |
+| 295 | Oct/Nov 2012 P3 v31 Q6 | Differential Equations |
+| 296 | Oct/Nov 2012 P3 v31 Q7 | Indices, Logarithms & Exponents; Differentiation |
+| 297 | Oct/Nov 2012 P3 v31 Q10 | - |
+| 298 | May/June 2011 P3 v31 Q3 | - |
+| 299 | May/June 2011 P3 v31 Q4 | Algebra; Indices, Logarithms & Exponents |
+| 300 | May/June 2011 P3 v31 Q6 | Trigonometry; Differential Equations; Numerical Solutions/Iteration |
+| 301 | May/June 2011 P3 v31 Q9 | Trigonometry; Integration |
+| 302 | May/June 2010 P3 v31 Q1 | Algebra |
+| 303 | May/June 2010 P3 v31 Q4 | Trigonometry; Integration |
+| 304 | May/June 2010 P3 v31 Q6 | Trigonometry; Numerical Solutions/Iteration |
+| 305 | May/June 2010 P3 v31 Q7 | Complex Numbers |
+| 306 | May/June 2010 P3 v31 Q10 | - |
+| 307 | Oct/Nov 2010 P3 v31 Q2 | Indices, Logarithms & Exponents |
+| 308 | Oct/Nov 2010 P3 v31 Q3 | Trigonometry |
+| 309 | Oct/Nov 2010 P3 v31 Q5 | Integration |
+| 310 | Oct/Nov 2010 P3 v31 Q7 | - |
+| 311 | Oct/Nov 2010 P3 v32 Q2 | Indices, Logarithms & Exponents |
+| 312 | Oct/Nov 2010 P3 v32 Q3 | Trigonometry |
+| 313 | Oct/Nov 2010 P3 v32 Q5 | Integration |
+| 314 | Oct/Nov 2010 P3 v32 Q10 | Differential Equations |
+| 315 | Oct/Nov 2010 P3 v33 Q1 | Algebra |
+| 316 | Oct/Nov 2010 P3 v33 Q2 | Differentiation |
+| 317 | Oct/Nov 2010 P3 v33 Q4 | Differentiation; Integration |
+| 318 | Oct/Nov 2010 P3 v33 Q7 | Integration; Numerical Solutions/Iteration |
+| 319 | Oct/Nov 2010 P3 v33 Q8 | Trigonometry |
+| 320 | Oct/Nov 2010 P3 v33 Q9 | Differential Equations |
+| 321 | Oct/Nov 2009 P3 v32 Q3 | Differentiation |
+| 322 | Oct/Nov 2009 P3 v32 Q5 | Algebra |
+| 323 | Oct/Nov 2009 P3 v32 Q6 | Integration |
+| 324 | Oct/Nov 2009 P3 v32 Q8 | Algebra |
+| 325 | Oct/Nov 2009 P3 v32 Q9 | Differential Equations |
+| 326 | Oct/Nov 2017 P3 v33 Q2 | Indices, Logarithms & Exponents |
 
 ## By topic
 
-### Algebra (29)
+### Algebra (81)
 
-Q4, Q6, Q10, Q12, Q14, Q18, Q26, Q34, Q40, Q45, Q49, Q55, Q58, Q65, Q70, Q73, Q77, Q78, Q80, Q81, Q84, Q89, Q91, Q92, Q95, Q99, Q101, Q103, Q104
+Q4, Q6, Q10, Q12, Q14, Q18, Q26, Q34, Q40, Q45, Q49, Q55, Q58, Q65, Q70, Q73, Q77, Q78, Q80, Q81, Q84, Q89, Q91, Q92, Q95, Q99, Q101, Q103, Q104, Q110, Q114, Q115, Q116, Q124, Q125, Q130, Q131, Q135, Q142, Q147, Q150, Q153, Q156, Q158, Q159, Q162, Q164, Q170, Q176, Q188, Q189, Q196, Q201, Q209, Q215, Q216, Q220, Q222, Q224, Q232, Q233, Q241, Q250, Q251, Q254, Q257, Q259, Q260, Q262, Q267, Q275, Q278, Q279, Q287, Q288, Q292, Q299, Q302, Q315, Q322, Q324
 
-### Indices, Logarithms & Exponents (16)
+### Indices, Logarithms & Exponents (58)
 
-Q1, Q5, Q11, Q27, Q33, Q39, Q45, Q50, Q57, Q65, Q70, Q73, Q75, Q84, Q85, Q94
+Q1, Q5, Q11, Q27, Q33, Q39, Q45, Q50, Q57, Q65, Q70, Q73, Q75, Q84, Q85, Q94, Q110, Q115, Q119, Q120, Q121, Q126, Q133, Q138, Q141, Q143, Q148, Q150, Q163, Q171, Q177, Q184, Q190, Q195, Q199, Q204, Q205, Q208, Q209, Q210, Q212, Q214, Q217, Q223, Q227, Q231, Q240, Q249, Q267, Q272, Q277, Q279, Q293, Q296, Q299, Q307, Q311, Q326
 
-### Trigonometry (25)
+### Trigonometry (80)
 
-Q15, Q22, Q32, Q35, Q41, Q44, Q52, Q53, Q59, Q62, Q63, Q64, Q66, Q71, Q72, Q76, Q78, Q79, Q83, Q85, Q86, Q90, Q96, Q100, Q102
+Q15, Q22, Q32, Q35, Q41, Q44, Q52, Q53, Q59, Q62, Q63, Q64, Q66, Q71, Q72, Q76, Q78, Q79, Q83, Q85, Q86, Q90, Q96, Q100, Q102, Q107, Q112, Q113, Q117, Q127, Q132, Q134, Q136, Q137, Q139, Q140, Q144, Q145, Q151, Q152, Q154, Q157, Q166, Q167, Q173, Q180, Q181, Q185, Q186, Q191, Q192, Q197, Q200, Q203, Q205, Q206, Q211, Q212, Q218, Q219, Q230, Q234, Q235, Q243, Q244, Q261, Q265, Q268, Q269, Q274, Q283, Q289, Q294, Q300, Q301, Q303, Q304, Q308, Q312, Q319
 
-### Differentiation (20)
+### Differentiation (58)
 
-Q2, Q4, Q16, Q19, Q28, Q32, Q37, Q41, Q42, Q53, Q62, Q66, Q75, Q76, Q83, Q84, Q86, Q87, Q93, Q100
+Q2, Q4, Q16, Q19, Q28, Q32, Q37, Q41, Q42, Q53, Q62, Q66, Q75, Q76, Q83, Q84, Q86, Q87, Q93, Q100, Q105, Q108, Q111, Q120, Q125, Q134, Q136, Q139, Q140, Q153, Q159, Q167, Q173, Q174, Q181, Q186, Q191, Q198, Q200, Q203, Q205, Q207, Q215, Q224, Q233, Q236, Q242, Q245, Q255, Q270, Q273, Q289, Q290, Q294, Q296, Q316, Q317, Q321
 
-### Integration (21)
+### Integration (72)
 
-Q10, Q12, Q13, Q18, Q19, Q23, Q32, Q62, Q63, Q65, Q66, Q71, Q73, Q76, Q79, Q83, Q86, Q87, Q93, Q99, Q100
+Q10, Q12, Q13, Q18, Q19, Q23, Q32, Q62, Q63, Q65, Q66, Q71, Q73, Q76, Q79, Q83, Q86, Q87, Q93, Q99, Q100, Q105, Q109, Q113, Q124, Q130, Q134, Q135, Q136, Q137, Q140, Q145, Q146, Q148, Q152, Q158, Q167, Q174, Q181, Q187, Q190, Q199, Q200, Q203, Q207, Q208, Q209, Q212, Q213, Q217, Q222, Q234, Q236, Q243, Q245, Q255, Q262, Q269, Q272, Q275, Q282, Q283, Q289, Q292, Q294, Q301, Q303, Q309, Q313, Q317, Q318, Q323
 
-### Differential Equations (11)
+### Differential Equations (39)
 
-Q8, Q17, Q24, Q31, Q47, Q54, Q62, Q69, Q71, Q86, Q98
+Q8, Q17, Q24, Q31, Q47, Q54, Q62, Q69, Q71, Q86, Q98, Q122, Q128, Q135, Q140, Q146, Q158, Q165, Q172, Q179, Q187, Q199, Q208, Q212, Q219, Q230, Q239, Q248, Q264, Q266, Q276, Q284, Q285, Q286, Q295, Q300, Q314, Q320, Q325
 
-### Complex Numbers (15)
+### Complex Numbers (34)
 
-Q3, Q7, Q14, Q21, Q29, Q36, Q46, Q51, Q60, Q67, Q80, Q82, Q91, Q97, Q103
+Q3, Q7, Q14, Q21, Q29, Q36, Q46, Q51, Q60, Q67, Q80, Q82, Q91, Q97, Q103, Q116, Q129, Q142, Q147, Q155, Q160, Q168, Q182, Q188, Q194, Q226, Q229, Q238, Q247, Q263, Q271, Q274, Q281, Q305
 
-### Numerical Solutions/Iteration (10)
+### Numerical Solutions/Iteration (36)
 
-Q13, Q15, Q30, Q53, Q64, Q75, Q85, Q90, Q100, Q102
+Q13, Q15, Q30, Q53, Q64, Q75, Q85, Q90, Q100, Q102, Q106, Q117, Q133, Q141, Q148, Q154, Q164, Q173, Q178, Q192, Q203, Q206, Q217, Q223, Q235, Q244, Q253, Q256, Q258, Q268, Q272, Q277, Q284, Q300, Q304, Q318

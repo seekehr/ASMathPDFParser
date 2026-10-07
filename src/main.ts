@@ -6,6 +6,8 @@ import { labelQuestions, loadLabels, saveLabels, type LabelMap } from "./label.j
 import { analyze, groupQuestions, loadClean, questionKey, renderJpegs, type PageInfo, type Question } from "./source.js";
 
 const skipLabels = process.argv.includes("--no-label");
+// ignore the labels in out/labels.md and label every question again
+const relabel = process.argv.includes("--relabel");
 
 async function main() {
   console.log(`Loading ${INPUT_PDF}`);
@@ -17,7 +19,7 @@ async function main() {
   console.log(`Found ${all.length} questions, keeping ${questions.length} from Paper ${PAPER}`);
 
   const keys = questions.map(questionKey);
-  let labels = loadLabels();
+  let labels = relabel ? {} : loadLabels();
   const unlabelled = questions.filter((q) => !labels[questionKey(q)]);
   if (unlabelled.length && !skipLabels) {
     console.log(`Labelling ${unlabelled.length} questions via OpenRouter`);
@@ -35,7 +37,7 @@ async function main() {
       return { key: questionKey(q), id, images: Array.from({ length: last - first + 1 }, (_, i) => first + i) };
     });
     const images = await renderJpegs(await c.doc.save(), LABEL_IMAGE_WIDTH);
-    labels = await labelQuestions(jobs, images, keys);
+    labels = await labelQuestions(jobs, images, keys, labels);
   }
 
   saveLabels(labels, keys);
@@ -46,7 +48,16 @@ async function main() {
 }
 
 async function write(file: string, c: Composer) {
-  fs.writeFileSync(file, await c.doc.save());
+  const bytes = await c.doc.save();
+  try {
+    fs.writeFileSync(file, bytes);
+  } catch (err) {
+    // Windows locks files that are open in most PDF viewers
+    if ((err as NodeJS.ErrnoException).code === "EBUSY" || (err as NodeJS.ErrnoException).code === "EPERM") {
+      throw new Error(`Can't overwrite ${file}: it's probably open in a PDF viewer. Close it and rerun.`);
+    }
+    throw err;
+  }
   console.log(`Wrote ${file} (${c.doc.getPageCount()} pages)`);
 }
 

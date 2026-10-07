@@ -155,12 +155,12 @@ export function parseReply(text: string): Record<string, unknown> {
  * Labels the given questions with free OpenRouter vision models, sending page `images` (JPEG,
  * several questions each) up to `IMAGES_PER_REQUEST` at a time to stay within the free tier's
  * 50 requests a day. Results are saved after every request, so a run stopped by the daily limit
- * resumes where it left off. `allKeys` orders the rows of the labels file.
+ * resumes where it left off. `labels` holds the labels known so far and is updated in place;
+ * `allKeys` orders the rows of the labels file.
  */
-export async function labelQuestions(jobs: LabelJob[], images: Buffer[], allKeys: string[]) {
+export async function labelQuestions(jobs: LabelJob[], images: Buffer[], allKeys: string[], labels: LabelMap) {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) throw new Error("Set OPENROUTER_API_KEY (e.g. in .env) to label questions");
-  const labels = loadLabels();
 
   let lastRequest = 0;
   // free models are often rate-limited by their upstream provider; on errors we move on to the

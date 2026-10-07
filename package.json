@@ -5,8 +5,9 @@
   "scripts": {
     "build": "tsx --env-file-if-exists=.env src/main.ts",
     "build:no-label": "tsx --env-file-if-exists=.env src/main.ts --no-label",
-    "typecheck": "tsc --noEmit",
-    "test": "tsx --test \"test/**/*.test.ts\""
+    "relabel": "tsx --env-file-if-exists=.env src/main.ts --relabel",
+    "test": "tsx --test \"test/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
