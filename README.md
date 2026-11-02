@@ -48,3 +48,5 @@ the run stops with progress saved in `out/labels.md`; rerun later to finish.
 - `npm run typecheck` checks types.
 
 The first run renders every page to find where the content is (around 3 minutes). The result is cached in `.cache/`.
+
+;D
