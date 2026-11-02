@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Turns the 9709 hardest-questions PDF into a clean, topic-labelled Paper 3 booklet",
   "scripts": {
-    "build": "tsx --env-file-if-exists=.env src/main.ts",
-    "build:no-label": "tsx --env-file-if-exists=.env src/main.ts --no-label",
+    "build": "node init && tsx --env-file-if-exists=.env src/main.ts",
+    "build:no-label": "node init && tsx --env-file-if-exists=.env src/main.ts --no-label",
     "relabel": "tsx --env-file-if-exists=.env src/main.ts --relabel",
     "test": "tsx --test \"test/**/*.test.ts\"",
     "typecheck": "tsc --noEmit"
@@ -23,6 +23,8 @@
   "homepage": "https://github.com/seekehr/ASMathPDFParser#readme",
   "dependencies": {
     "@napi-rs/canvas": "^1.0.10",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^6.4.299"
   },
